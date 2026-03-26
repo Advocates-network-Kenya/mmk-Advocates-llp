@@ -20,7 +20,8 @@ Livewire::setUpdateRoute(function ($handle) {
     return Route::post('livewire/update', $handle);
 });
 
-Route::get('/', WelcomeController::class);
+//frontend routes
+require __DIR__.'/frontend.php';
 
 Route::prefix(config('admintw.prefix'))->middleware(['auth', 'verified', 'activeUser', 'ipCheckMiddleware'])->group(function () {
     Route::get('/', Dashboard::class)->name('dashboard');
