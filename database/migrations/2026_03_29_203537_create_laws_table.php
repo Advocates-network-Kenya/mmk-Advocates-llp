@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('laws', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->text('description');
+            $table->string('image');
+            $table->foreignUuid('user_id')->constrained('users')->onDelete('cascade');
+            $table->longText('content');
+            $table->string('slug');
+            $table->string('icon');
             $table->timestamps();
         });
     }

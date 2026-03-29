@@ -14,6 +14,8 @@ class LawController extends Controller
     public function index()
     {
         //
+        $title = 'Areas of law';
+        return view('backend.law.index', ['title' => $title]);
     }
 
     /**
@@ -22,6 +24,8 @@ class LawController extends Controller
     public function create()
     {
         //
+        $title = 'Add Area of law';
+        return view('backend.law.create', ['title' => $title]);
     }
 
     /**

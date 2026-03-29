@@ -4,7 +4,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-5 col-md-6">
                         <div class="about-img">
-                            <img src="img/about.jpg" alt="Image">
+                            <img src="{{ asset('media/home.png') }}" alt="Image">
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-6">
@@ -13,17 +13,12 @@
                         </div>
                         <div class="about-text">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi.
-                                Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida
-                                condimentum, viverra quis sem.
+                               MMK Advocates LLP is a forward-thinking and dynamic law firm based in Kenya,offering a comprehensive array of legal services to a diverse clientele.
                             </p>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi.
-                                Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida
-                                condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean
-                                consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+                               Our clients include local and international corporations, government entities, multinational companies, non-governmental organizations (NGOs), and high-net-worth individuals. The firm is headquartered in Thika.
                             </p>
-                            <a class="btn" href="">Learn More</a>
+                            <a class="btn" href="{{}}">Learn More</a>
                         </div>
                     </div>
                 </div>

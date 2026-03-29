@@ -12,7 +12,7 @@ class StorelawRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,6 +24,13 @@ class StorelawRequest extends FormRequest
     {
         return [
             //
+            'title' => 'required',
+            'description' => 'required',
+             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5400000',
+            'content' => 'required',
+            'icon' => 'required',
+            //'slug' => 'required',
+            //'user_id' => 'required',
         ];
     }
 }

@@ -9,4 +9,16 @@ class law extends Model
 {
     /** @use HasFactory<\Database\Factories\LawFactory> */
     use HasFactory;
+    public $fillable = [
+        'title',
+        'description',
+        //image
+        'image',
+        'user_id',
+        //content
+        'content',
+        'slug',
+        'icon',
+
+    ];
 }
