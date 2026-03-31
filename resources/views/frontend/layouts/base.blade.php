@@ -27,6 +27,10 @@
     {{-- css overwrite --}}
     {{-- button --}}
     <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
         .cta-button {
             display: inline-block;
             background-color: #880422;
@@ -53,10 +57,63 @@
             box-shadow: 0 0 12px rgba(112, 28, 9, 0.6);
         }
 
+          .top-bar {
+            background: #880422 !important;
+        }
+
+        .top-bar .text h2,
+        .top-bar .text p,
+        .top-bar .social a i {
+            color: #ffffff !important;
+        }
+
+    
+
+        .footer {
+            background: #880422 !important;
+        }
+
         .logo img {
             max-height: 60px;
             width: auto;
         }
+
+        /* apointment form styles */
+          <style>
+        .appointment {
+            padding: 90px 0;
+        }
+        .appointment-form {
+            padding: 45px;
+            background: #f3f6ff;
+            border-radius: 10px;
+        }
+        .appointment-form .form-control {
+            height: 45px;
+            padding: 10px 15px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+        }
+        .appointment-form textarea.form-control {
+            height: auto;
+        }
+        .appointment-form .btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #ffffff;
+            background: #880411;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .appointment-form .btn:hover {
+            background: #6d030d;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        /* end apointment form styles*/
     </style>
     {{-- end css overwrite --}}
 </head>
