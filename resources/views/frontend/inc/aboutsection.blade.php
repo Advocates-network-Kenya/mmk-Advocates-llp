@@ -19,7 +19,8 @@
                                Our clients include local and international corporations, government entities, multinational companies, non-governmental organizations (NGOs), and high-net-worth individuals. The firm is headquartered in Thika.
                             </p>
                            
-                            <a class="btn" href="{{ route('ourteam') }}">Our Team</a>
+                            <a class="cta-button" href="{{ route('aboutus') }}">Learn More</a>
+                            
                         </div>
                     </div>
                 </div>

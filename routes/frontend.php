@@ -15,4 +15,5 @@ Route::prefix('mmkadvocates')->group(function () {
     Route::get('contact-us', [FrontendController::class, 'contact'])->name('contact');
     Route::get('consultation', [FrontendController::class, 'consultation'])->name('consultation');
     Route::get('appointment', [FrontendController::class, 'appointment'])->name('appointment');
+    Route::get('contact', [FrontendController::class, 'contact'])->name('contact');
 });

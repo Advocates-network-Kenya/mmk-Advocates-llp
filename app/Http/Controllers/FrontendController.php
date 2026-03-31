@@ -31,7 +31,7 @@ class FrontendController extends Controller
     public function practiceareas()
     {
         //
-        $title = 'About Us';
+        $title = 'Practice Areas';
         return view('frontend.pages.practice', ['title' => $title]);
     }
 
@@ -58,6 +58,14 @@ class FrontendController extends Controller
         //
         $title = 'consultation';
         return view('frontend.pages.consultation', ['title' => $title]);
+    }
+
+//apointment
+    public function appointment()
+    {
+        //
+        $title = 'Apointment';
+        return view('frontend.pages.appointment', ['title' => $title]);
     }
 
 

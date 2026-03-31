@@ -25,35 +25,39 @@
     <!-- Template Stylesheet -->
     <link href="{{ asset('theme/css/style.css') }}" rel="stylesheet">
     {{-- css overwrite --}}
-       {{-- button --}}
-       <style>
-.cta-button {
-  display: inline-block;
-  background-color: #880422;
-  color: #ffffff;
-  padding: 14px 28px;
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
+    {{-- button --}}
+    <style>
+        .cta-button {
+            display: inline-block;
+            background-color: #880422;
+            color: #ffffff;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
 
-.cta-button:hover {
-  background-color: #fb3000;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-}
+        .cta-button:hover {
+            background-color: #fb3000;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+        }
 
 
 
-.cta-button:hover {
-  background-color: #ffbd59;
-  transform: translateY(-2px);
-  box-shadow: 0 0 12px rgba(112, 28, 9, 0.6);
-}
+        .cta-button:hover {
+            background-color: #ffbd59;
+            transform: translateY(-2px);
+            box-shadow: 0 0 12px rgba(112, 28, 9, 0.6);
+        }
 
-</style>
+        .logo img {
+            max-height: 60px;
+            width: auto;
+        }
+    </style>
     {{-- end css overwrite --}}
 </head>
 
@@ -66,8 +70,7 @@
                     <div class="col-lg-3">
                         <div class="logo">
                             <a href="{{ route('home') }}">
-                                <h1>MMK</h1>
-                                <!-- <img src="img/logo.jpg" alt="Logo"> -->
+                                <img src="{{ asset('media/logo.jpg') }}" alt="MMK Advocates Logo" class="img-fluid">
                             </a>
                         </div>
                     </div>
@@ -79,7 +82,7 @@
                             </div>
                             <div class="text">
                                 <h2>+254 7-224-722-28</h2>
-                                <p>Call Us For a  Consultation</p>
+                                <p>Call Us For a Consultation</p>
                             </div>
                             <div class="social">
                                 <a href=""><i class="fab fa-twitter"></i></a>
@@ -109,15 +112,15 @@
                             <a href="{{ route('aboutus') }}" class="nav-item nav-link">About</a>
                             <a href="{{ route('practiceareas') }}" class="nav-item nav-link">Practice</a>
                             <a href="{{ route('ourteam') }}" class="nav-item nav-link">Attorneys</a>
-                            <a href="{{ route('home') }}" class="nav-item nav-link">Case Studies</a>
+                            <a href="{{ route('appointment') }}" class="nav-item nav-link">Consultation</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Resources</a>
                                 <div class="dropdown-menu">
                                     <a href="/" class="dropdown-item">News and Articles</a>
-                                    <a href="/" class="dropdown-item">socials</a>
+                                    <a href="/" class="dropdown-item">Case Studies</a>
                                 </div>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>
                         </div>
                         <div class="ml-auto">
                             <a class="btn" href="{{ route('appointment') }}">Get Appointment</a>
@@ -128,31 +131,12 @@
         </div>
         <!-- Nav Bar End -->
 
+        {{-- content --}}
 
-       
-
-{{-- content --}}
-
-
-@yield('content')
-
-       
-{{-- content    ENDS --}}
-
-      
+        @yield('content')
 
 
-       
-
-
-        
-
-
-        
-
-
-      
-
+        {{-- content    ENDS --}}
 
         <!-- Newsletter Start -->
         <div class="newsletter">
@@ -177,7 +161,11 @@
                         <div class="footer-about">
                             <h2>About Us</h2>
                             <p>
-                                MMK Advocates LLP is a forward-thinking and dynamic law firm based in Kenya, offering a comprehensive array of legal services to a diverse clientele. Our clients include local and international corporations, government entities, multinational companies, non-governmental organizations (NGOs), and high-net-worth individuals. The firm is headquartered in Thika.
+                                MMK Advocates LLP is a forward-thinking and dynamic law firm based in Kenya, offering a
+                                comprehensive array of legal services to a diverse clientele. Our clients include local
+                                and international corporations, government entities, multinational companies,
+                                non-governmental organizations (NGOs), and high-net-worth individuals. The firm is
+                                headquartered in Thika.
                             </p>
                         </div>
                     </div>
@@ -200,14 +188,18 @@
                                     <a href="{{ route('aboutus') }}">About Us</a>
                                     <a href="{{ route('practiceareas') }}">Practices</a>
                                     <a href="{{ route('ourteam') }}">Attorneys</a>
-                                    <a href="">Case Studies</a>
-                                    <a href="">FAQs</a>
+                                    <a href="{{ route('appointment') }}">Apointment</a>
+                                    <a href="{{ route('contact')}}">FAQs</a>
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-4">
                                 <div class="footer-contact">
                                     <h2>Get In Touch</h2>
-                                    <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
+                                    <p><i class="fa fa-map-marker-alt"></i>THIKA SECTION 9,
+                                        YELLOW HOUSE NO. 45
+                                        MUGO KIBIRU ROAD.
+                                        P. O BOX 7449-01000
+                                        THIKA.</p>
                                     <p><i class="fa fa-phone-alt"></i>+254 7-224-722-28</p>
                                     <p><i class="fa fa-envelope"></i>mmk.advocates@gmail.com</p>
                                     <div class="footer-social">
@@ -228,14 +220,15 @@
                     <a href="">Terms of use</a>
                     <a href="">Privacy policy</a>
                     <a href="">Cookies</a>
-                    <a href="">Help</a>
+                    <a href="{{ route('appointment') }}">Help</a>
                     <a href="">FQAs</a>
                 </div>
             </div>
             <div class="container copyright">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>&copy; <a href="#">mmk.advocates.or.ke</a>, All Right Reserved.</p>
+                        <p>&copy;{{ date('Y') }} <a href="#">mmk.advocates.or.ke</a>, All Right Reserved.
+                        </p>
                     </div>
                     <div class="col-md-6">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
@@ -252,12 +245,12 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="{{asset('theme/lib/easing/easing.min.js')}}"></script>
-    <script src="{{asset('theme/lib/owlcarousel/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('theme/lib/isotope/isotope.pkgd.min.js')}}"></script>
+    <script src="{{ asset('theme/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('theme/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('theme/lib/isotope/isotope.pkgd.min.js') }}"></script>
 
     <!-- Template Javascript -->
-    <script src="{{asset('theme/js/main.js')}}"></script>
+    <script src="{{ asset('theme/js/main.js') }}"></script>
 </body>
 
 </html>

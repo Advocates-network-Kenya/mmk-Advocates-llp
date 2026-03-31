@@ -14,7 +14,7 @@
     </style>
     @include('frontend.inc.banner')
     <!-- About Start -->
-    {{-- <div class="about">
+    <div class="about">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
@@ -41,7 +41,7 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
     <!-- About End -->
 
     <!-- Vision, Mission & Values Start -->
@@ -114,7 +114,7 @@
             </div>
             <div class="row">
                 <div class="col-12 text-center mt-4">
-                    <a class="cta-button" href="{{ route('ourteam') }}">Meet Our Team</a>
+                    <a class="cta-button" href="{{ route('practiceareas') }}">Our Practice Areas</a>
                 </div>
             </div>
         </div>
