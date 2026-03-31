@@ -24,6 +24,37 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('theme/css/style.css') }}" rel="stylesheet">
+    {{-- css overwrite --}}
+       {{-- button --}}
+       <style>
+.cta-button {
+  display: inline-block;
+  background-color: #880422;
+  color: #ffffff;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #fb3000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.cta-button:hover {
+  background-color: #ffbd59;
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(112, 28, 9, 0.6);
+}
+
+</style>
+    {{-- end css overwrite --}}
 </head>
 
 <body>
@@ -82,8 +113,8 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Resources</a>
                                 <div class="dropdown-menu">
-                                    <a href="/" class="dropdown-item">Blog Page</a>
-                                    <a href="/" class="dropdown-item">Single Page</a>
+                                    <a href="/" class="dropdown-item">News and Articles</a>
+                                    <a href="/" class="dropdown-item">socials</a>
                                 </div>
                             </div>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
