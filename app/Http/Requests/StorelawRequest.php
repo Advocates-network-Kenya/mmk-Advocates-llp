@@ -26,7 +26,7 @@ class StorelawRequest extends FormRequest
             //
             'title' => 'required',
             'description' => 'required',
-             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5400000',
+             //'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5400000',
             'content' => 'required',
             'icon' => 'required',
             //'slug' => 'required',

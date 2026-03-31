@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\law;
 use App\Http\Requests\StorelawRequest;
 use App\Http\Requests\UpdatelawRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+
+
 
 class LawController extends Controller
 {
@@ -15,7 +19,8 @@ class LawController extends Controller
     {
         //
         $title = 'Areas of law';
-        return view('backend.law.index', ['title' => $title]);
+        $practiceareas = law::all();
+        return view('backend.law.index', compact('title', 'practiceareas'));
     }
 
     /**
@@ -34,6 +39,22 @@ class LawController extends Controller
     public function store(StorelawRequest $request)
     {
         //
+        //generate slug from title
+        $slug = Str::slug($request->title, '-');
+        //user_id
+        $userId = Auth::id();
+        law::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            //'image' => $request->image,  
+            'content' => $request->content,
+            'icon' => $request->icon,
+            'slug' => $slug,
+            'user_id' => $userId,
+
+
+        ]);
+         return redirect()->route('law.index')->with('success', ' created successfully.');
     }
 
     /**
