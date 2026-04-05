@@ -45,7 +45,7 @@
                                     <textarea class="form-control" rows="4" placeholder="Brief description of your legal requirements" required></textarea>
                                 </div>
                                 <div class="col-12 text-center">
-                                    <button class="btn" type="submit">Submit Appointment Request</button>
+                                    <button class="cta-button border-0" type="submit">Submit Appointment Request</button>
                                 </div>
                             </div>
                         </form>

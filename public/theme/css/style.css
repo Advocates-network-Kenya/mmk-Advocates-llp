@@ -673,7 +673,7 @@ a:focus {
     text-align: center;
     font-size: 60px;
     color: #aa9166;
-    background: #121518;
+    background: #6d030d;
     transition: .5s;
 }
 
@@ -707,7 +707,7 @@ a:focus {
     color: #aa9166;
     border: 2px solid #aa9166;
     border-radius: 0;
-    background: #121518;
+    background:#6d030d;
     transition: .3s;
 }
 

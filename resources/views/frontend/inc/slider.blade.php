@@ -9,9 +9,9 @@
                 <div class="carousel-item active">
                     <img src="{{asset('theme/img/carousel-1.jpg')}}" alt="Carousel Image">
                     <div class="carousel-caption">
-                        <h1 class="animated fadeInLeft">We fight for your justice</h1>
-                        <p class="animated fadeInRight">Lorem ipsum dolor sit amet elit. Mauris odio mauris...</p>
-                        <a class="btn animated fadeInUp" href="#">Get free consultation</a>
+                        <h1 class="animated fadeInLeft">Where Justice, Integrity, and Professionalism Meet.</h1>
+                        <p class="animated fadeInRight">MMK Advocates LLP is a forward-thinking and dynamic law firm based in Kenya, offering a comprehensive array of legal services to a diverse clientele.</p>
+                        <a class="btn animated fadeInUp" href="#aboutus">About Us</a>
                     </div>
                 </div>
 
@@ -19,8 +19,8 @@
                     <img src="{{asset('theme/img/carousel-2.jpg')}}" alt="Carousel Image">
                     <div class="carousel-caption">
                         <h1 class="animated fadeInLeft">We prepared to oppose for you</h1>
-                        <p class="animated fadeInRight">Lorem ipsum dolor sit amet elit. Mauris odio mauris...</p>
-                        <a class="btn animated fadeInUp" href="#">Get free consultation</a>
+                        <p class="animated fadeInRight">We are committed to defending your rights with precision, strategy, and dedication</p>
+                        <a class="btn animated fadeInUp" href="{{ route('appointment') }}">Get free consultation</a>
                     </div>
                 </div>
 
@@ -28,8 +28,8 @@
                     <img src="{{asset('theme/img/carousel-3.jpg')}}" alt="Carousel Image">
                     <div class="carousel-caption">
                         <h1 class="animated fadeInLeft">We fight for your privilege</h1>
-                        <p class="animated fadeInRight">Lorem ipsum dolor sit amet elit. Mauris odio mauris...</p>
-                        <a class="btn animated fadeInUp" href="#">Get free consultation</a>
+                        <p class="animated fadeInRight">We are dedicated to safeguarding your rights, interests, and opportunities. With strategic advocacy and unwavering commitment, we ensure your voice is heard and your position is protected.</p>
+                        <a class="btn animated fadeInUp" href="{{ route('contact') }}">Contact Us</a>
                     </div>
                 </div>
             </div>

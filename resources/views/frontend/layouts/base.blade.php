@@ -27,8 +27,12 @@
     {{-- css overwrite --}}
     {{-- button --}}
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background-color: #f8f9fa;
+            background-color: #a2cbf5;
         }
 
         .cta-button {
@@ -47,14 +51,6 @@
             background-color: #fb3000;
             transform: translateY(-2px);
             box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-        }
-
-
-
-        .cta-button:hover {
-            background-color: #ffbd59;
-            transform: translateY(-2px);
-            box-shadow: 0 0 12px rgba(112, 28, 9, 0.6);
         }
 
           .top-bar {
@@ -79,7 +75,6 @@
         }
 
         /* apointment form styles */
-          <style>
         .appointment {
             padding: 90px 0;
         }
@@ -113,6 +108,123 @@
             background: #6d030d;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
+        /* Service Item UI Improvements */
+        .bg-brand {
+            background-color: #880422 !important;
+        }
+
+        .cta-button-light {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #880422;
+            padding: 10px 24px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button-light:hover {
+            background-color: #ffbd59;
+            color: #880422;
+            text-decoration: none;
+        }
+
+        .service-item {
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon i {
+            color: #ffbd59 !important;
+        }
+
+        /* Carousel Overlay for better text contrast */
+        .carousel-item::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
+            z-index: 1;
+        }
+
+        .carousel-caption {
+            z-index: 2; /* Ensures text stays above the overlay */
+        }
+
+        /* New Practice Card UI Styles */
+        .practice-card {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            overflow: hidden; /* Ensures image corners are rounded */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%; /* Ensure cards in a row have equal height */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .practice-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .practice-card-image {
+            width: 100%;
+            height: 200px; /* Fixed height for images */
+            overflow: hidden;
+        }
+
+        .practice-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the area without distortion */
+            transition: transform 0.3s ease;
+        }
+
+        .practice-card:hover .practice-card-image img {
+            transform: scale(1.05); /* Subtle zoom on hover */
+        }
+
+        .practice-card-content {
+            padding: 25px;
+            flex-grow: 1; /* Allows content to take up remaining space */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Pushes button to bottom */
+        }
+
+        .practice-card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #880422; /* Brand color for headings */
+        }
+
+        .practice-card-content p {
+            font-size: 0.95rem;
+            color: #555555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .practice-card-content .cta-button-light {
+            align-self: flex-start; /* Align button to the left */
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
         /* end apointment form styles*/
     </style>
     {{-- end css overwrite --}}
@@ -272,8 +384,8 @@
                     </div>
                 </div>
             </div>
-            <div class="container footer-menu">
-                <div class="f-menu">
+            <div class="container footer-menu" style="background-color: #6d030d !important;">
+                <div class="f-menu" style="background-color: #6d030d !important;">
                     <a href="">Terms of use</a>
                     <a href="">Privacy policy</a>
                     <a href="">Cookies</a>

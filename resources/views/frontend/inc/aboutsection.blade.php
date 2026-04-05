@@ -1,5 +1,5 @@
 <!-- About Start -->
-        <div class="about">
+        <div class="about" id="aboutus">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-5 col-md-6">
@@ -9,7 +9,7 @@
                     </div>
                     <div class="col-lg-7 col-md-6">
                         <div class="section-header">
-                            <h2>Learn About Us</h2>
+                            <h2>Supporting You Every Step</h2>
                         </div>
                         <div class="about-text">
                             <p>
