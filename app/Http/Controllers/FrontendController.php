@@ -6,6 +6,9 @@ use App\Models\Frontend;
 use App\Http\Requests\StoreFrontendRequest;
 use App\Http\Requests\UpdateFrontendRequest;
 use App\Models\law;
+use App\Models\Team;
+use Illuminate\Support\Str;
+
 
 class FrontendController extends Controller
 {
@@ -46,7 +49,18 @@ class FrontendController extends Controller
     {
         //
         $title = 'Our Team';
-        return view('frontend.pages.team', ['title' => $title]);
+        //team where role = partner
+        $partners = Team::where('role', 'partner')->paginate(6);
+        //team where role = associate
+        $associates = Team::where('role', 'associate')->paginate(6);
+        //team where role = lawyer
+        $lawyers = Team::where('role', 'lawyer')->paginate(6);
+        //team where role = other
+        $others = Team::where('role', 'other')->paginate(6);
+        //team where role =paralegal
+        $paralegals = Team::where('role', 'paralegal')->paginate(6);
+
+        return view('frontend.pages.team',compact('title', 'partners', 'associates', 'lawyers', 'others', 'paralegals'));
     }
 
 
