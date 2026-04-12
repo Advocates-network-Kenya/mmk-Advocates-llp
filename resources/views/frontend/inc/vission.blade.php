@@ -1,5 +1,5 @@
   <!-- Feature Start -->
-  <div class="feature">
+  <div class="feature" style="overflow: hidden;">
       <div class="container">
           <div class="row">
               <div class="col-md-7">
@@ -54,11 +54,16 @@
                               ourselves and improve the quality of what we offer our clients.
                           </p>
                       </div>
+                  </div>
+                  <div class="row align-items-center feature-item">
+                      <div class="col-5">
+                          <div class="feature-icon">
+                              <i class="fa fa-hand-holding-heart"></i>
+                          </div>
+                      </div>
                       <div class="col-7">
                           <h3>Service</h3>
                           <p>
-
-                            
                               By combining our commitment to excellence, service and quality with professional resources
                               available to us, we strive to be the very best in the delivery of our legal services to
                               our clients.
@@ -68,7 +73,7 @@
               </div>
               <div class="col-md-5">
                   <div class="feature-img">
-                      <img src="{{ asset('theme/img/feature.jpg') }}" alt="Feature">
+                      <img src="{{ asset('theme/img/feature.jpg') }}" class="img-fluid" alt="Feature">
                   </div>
               </div>
           </div>

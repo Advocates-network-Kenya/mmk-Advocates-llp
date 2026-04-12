@@ -39,16 +39,21 @@ class LawController extends Controller
     public function store(StorelawRequest $request)
     {
         //
+       // dd($request);
         //generate slug from title
         $slug = Str::slug($request->title, '-');
         //user_id
         $userId = Auth::id();
+         //upload featured image if exists
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('uploads/law', 'public');
+        }
         law::create([
             'title' => $request->title,
             'description' => $request->description,
-            //'image' => $request->image,  
+            'image' => $path,  
             'content' => $request->content,
-            'icon' => $request->icon,
+           // 'icon' => $request->icon,
             'slug' => $slug,
             'user_id' => $userId,
 

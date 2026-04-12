@@ -10,36 +10,42 @@
                 <h1 class="text-2xl font-bold text-indigo-700">{{ $title }}</h1>
             </div>
             <div x-data="{ submitting: false }" class="mt-6">
-                <x-form id="article-form" x-on:submit="submitting = true" action="{{ route('law.store') }}" method="POST"
+                <x-form id="article-form" x-on:submit="submitting = true" action="{{ route('team.store') }}" method="POST"
                     class="space-y-6" enctype="multipart/form-data">
                     @csrf
                     {{-- title --}}
                     <div>
-                        <x-form.input name='title' label='Practice Area Title' />
+                        <x-form.input name='name' label='Full Name of Team Member' />
                     </div>
-                    {{-- description /excerpt --}}
+                    {{-- title --}}
                     <div>
-                        <x-form.textarea name='description' label='description' cols='10' rows='10'>
-                        </x-form.textarea>
-
+                        <x-form.input name='email' label='Email Address of Team Member' />
                     </div>
+                    {{-- Qualifications --}}
+                    <div>
+                        <x-form.input name='qualifications' label='Educational Qualifications' />
+                    </div>
+                 
                     {{-- image --}}
                     <div>
-                        <x-form.input name='image'  type="file" label='Image' />
+                        <x-form.input name='image'  type="file" label='Profile Image' />
                     </div>
                     {{-- content --}}
                     <div>
-                        <x-form.textarea name='content' label='Content' cols='10' rows='10'>
+                        <x-form.textarea name='content' label='Bio' cols='10' rows='10'>
                         </x-form.textarea>
 
                     </div>
                     
-                    {{-- select status --}}
-                   {{--  <x-form.select name="status">
-                        <x-form.select-option value="Draft">Draft</x-form.select-option>
-                        <x-form.select-option value="published">Published</x-form.select-option>
-                        <x-form.select-option value="archived">Archived</x-form.select-option>
-                    </x-form.select> --}}
+                    {{-- select role --}}
+                     <x-form.select name="role">
+                        <x-form.select-option value="partner">partner</x-form.select-option>
+                        <x-form.select-option value="associate">Associate</x-form.select-option>
+                        <x-form.select-option value="lawyer">Lawyer</x-form.select-option>
+                        <x-form.select-option value="paralegal">Paralegal</x-form.select-option>
+                        <x-form.select-option value="other">Accountant</x-form.select-option>
+                       
+                    </x-form.select> 
                     {{-- featured Image --}}
                    {{--  <x-form.input name="featured_image" type="file"></x-form.input> --}}
                     {{-- Tags --}}

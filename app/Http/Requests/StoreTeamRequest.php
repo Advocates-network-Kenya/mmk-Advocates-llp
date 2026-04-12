@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class StorelawRequest extends FormRequest
+class StoreTeamRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,12 +24,13 @@ class StorelawRequest extends FormRequest
     {
         return [
             //
-            'title' => 'required',
-            'description' => 'required',
-             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5400000',
-            'content' => 'required',
-           // 'icon' => 'required',
+            'name' => 'required',
+            'email' => 'required|email',
             //'slug' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5400000',
+            'qualifications' => 'required',
+            'content' => 'required',
+            'role' => 'required',
             //'user_id' => 'required',
         ];
     }

@@ -1,5 +1,5 @@
  <!-- Carousel Start -->
-        <div id="carousel" class="carousel slide" data-ride="carousel">
+        <div id="carousel" class="carousel slide" data-ride="carousel" style="overflow: hidden;">
             <ol class="carousel-indicators">
                 <li data-target="#carousel" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel" data-slide-to="1"></li>
@@ -7,7 +7,7 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{asset('theme/img/carousel-1.jpg')}}" alt="Carousel Image">
+                    <img src="{{asset('theme/img/carousel-1.jpg')}}" class="d-block w-100" alt="Carousel Image">
                     <div class="carousel-caption">
                         <h1 class="animated fadeInLeft">Where Justice, Integrity, and Professionalism Meet.</h1>
                         <p class="animated fadeInRight">MMK Advocates LLP is a forward-thinking and dynamic law firm based in Kenya, offering a comprehensive array of legal services to a diverse clientele.</p>
@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="carousel-item">
-                    <img src="{{asset('theme/img/carousel-2.jpg')}}" alt="Carousel Image">
+                    <img src="{{asset('theme/img/carousel-2.jpg')}}" class="d-block w-100" alt="Carousel Image">
                     <div class="carousel-caption">
                         <h1 class="animated fadeInLeft">We prepared to oppose for you</h1>
                         <p class="animated fadeInRight">We are committed to defending your rights with precision, strategy, and dedication</p>
@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="carousel-item">
-                    <img src="{{asset('theme/img/carousel-3.jpg')}}" alt="Carousel Image">
+                    <img src="{{asset('theme/img/carousel-3.jpg')}}" class="d-block w-100" alt="Carousel Image">
                     <div class="carousel-caption">
                         <h1 class="animated fadeInLeft">We fight for your privilege</h1>
                         <p class="animated fadeInRight">We are dedicated to safeguarding your rights, interests, and opportunities. With strategic advocacy and unwavering commitment, we ensure your voice is heard and your position is protected.</p>

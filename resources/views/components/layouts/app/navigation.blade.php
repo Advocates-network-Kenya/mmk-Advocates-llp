@@ -27,3 +27,6 @@
 @can('view_users')
     <x-nav.link route="law.index" icon="users">{{ __('areas of law') }}</x-nav.link>
 @endcan
+@can('view_users')
+    <x-nav.link route="team.index" icon="users">{{ __('Our Team') }}</x-nav.link>
+@endcan

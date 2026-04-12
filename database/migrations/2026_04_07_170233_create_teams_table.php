@@ -11,15 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('laws', function (Blueprint $table) {
+        Schema::create('teams', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('description');
-            $table->string('image');
+            $table->string('name');
+            $table->string('email');
             $table->foreignUuid('user_id')->constrained('users')->onDelete('cascade');
-            $table->longText('content');
             $table->string('slug');
-            //$table->string('icon');
+            $table->string('image');
+            //qualifications
+            $table->text('qualifications'); 
+            //content
+            $table->longText('content');
+            //role : partner ,associate ,paralegal,lawyer,accountant and ict
+            $table->string('role');
             $table->timestamps();
         });
     }
@@ -29,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('laws');
+        Schema::dropIfExists('teams');
     }
 };

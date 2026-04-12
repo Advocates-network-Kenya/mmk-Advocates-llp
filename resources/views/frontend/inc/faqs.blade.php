@@ -4,7 +4,7 @@
                 <div class="row">
                     <div class="col-md-5">
                         <div class="faqs-img">
-                            <img src="img/faqs.jpg" alt="Image">
+                            <img src="img/faqs.jpg" class="img-fluid" alt="Image">
                         </div>
                     </div>
                     <div class="col-md-7">

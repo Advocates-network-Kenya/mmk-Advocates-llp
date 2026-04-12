@@ -6,7 +6,7 @@
                 </div>
                 <div class="owl-carousel blog-carousel">
                     <div class="blog-item">
-                        <img src="img/blog-1.jpg" alt="Blog">
+                        <img src="img/blog-1.jpg" class="img-fluid" alt="Blog">
                         <h3>Lorem ipsum dolor</h3>
                         <div class="meta">
                             <i class="fa fa-list-alt"></i>
@@ -21,7 +21,7 @@
                         <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
                     </div>
                     <div class="blog-item">
-                        <img src="img/blog-2.jpg" alt="Blog">
+                        <img src="img/blog-2.jpg" class="img-fluid" alt="Blog">
                         <h3>Lorem ipsum dolor</h3>
                         <div class="meta">
                             <i class="fa fa-list-alt"></i>
@@ -36,7 +36,7 @@
                         <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
                     </div>
                     <div class="blog-item">
-                        <img src="img/blog-3.jpg" alt="Blog">
+                        <img src="img/blog-3.jpg" class="img-fluid" alt="Blog">
                         <h3>Lorem ipsum dolor</h3>
                         <div class="meta">
                             <i class="fa fa-list-alt"></i>
@@ -51,7 +51,7 @@
                         <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
                     </div>
                     <div class="blog-item">
-                        <img src="img/blog-1.jpg" alt="Blog">
+                        <img src="img/blog-1.jpg" class="img-fluid" alt="Blog">
                         <h3>Lorem ipsum dolor</h3>
                         <div class="meta">
                             <i class="fa fa-list-alt"></i>
@@ -66,7 +66,7 @@
                         <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
                     </div>
                     <div class="blog-item">
-                        <img src="img/blog-2.jpg" alt="Blog">
+                        <img src="img/blog-2.jpg" class="img-fluid" alt="Blog">
                         <h3>Lorem ipsum dolor</h3>
                         <div class="meta">
                             <i class="fa fa-list-alt"></i>
@@ -81,7 +81,7 @@
                         <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
                     </div>
                     <div class="blog-item">
-                        <img src="img/blog-3.jpg" alt="Blog">
+                        <img src="img/blog-3.jpg" class="img-fluid" alt="Blog">
                         <h3>Lorem ipsum dolor</h3>
                         <div class="meta">
                             <i class="fa fa-list-alt"></i>
@@ -96,7 +96,7 @@
                         <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
                     </div>
                     <div class="blog-item">
-                        <img src="img/blog-1.jpg" alt="Blog">
+                        <img src="img/blog-1.jpg" class="img-fluid" alt="Blog">
                         <h3>Lorem ipsum dolor</h3>
                         <div class="meta">
                             <i class="fa fa-list-alt"></i>

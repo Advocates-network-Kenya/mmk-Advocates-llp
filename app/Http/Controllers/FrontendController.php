@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Frontend;
 use App\Http\Requests\StoreFrontendRequest;
 use App\Http\Requests\UpdateFrontendRequest;
+use App\Models\law;
 
 class FrontendController extends Controller
 {
@@ -14,8 +15,9 @@ class FrontendController extends Controller
     public function index()
     {
         //
+        $practiceareas = law::latest()->paginate(6);
         $title = 'Welcome to mmkAdvocates LLp';
-        return view('frontend.pages.index', ['title' => $title]);
+        return view('frontend.pages.index', ['title' => $title, 'practiceareas' => $practiceareas]);
     }
 
     /* Pages  */
@@ -31,11 +33,15 @@ class FrontendController extends Controller
     public function practiceareas()
     {
         //
+        $practiceareas = law::latest()->paginate(6);
         $title = 'Practice Areas';
-        return view('frontend.pages.practice', ['title' => $title]);
+        return view('frontend.pages.practice', [
+            'title' => $title,
+            'practiceareas' => $practiceareas
+        ]);
     }
 
-//Our Team
+    //Our Team
     public function ourteam()
     {
         //
@@ -44,7 +50,7 @@ class FrontendController extends Controller
     }
 
 
-//Contact Us
+    //Contact Us
     public function contact()
     {
         //
@@ -52,7 +58,7 @@ class FrontendController extends Controller
         return view('frontend.pages.contact', ['title' => $title]);
     }
 
-//Consultation
+    //Consultation
     public function consultation()
     {
         //
@@ -60,7 +66,7 @@ class FrontendController extends Controller
         return view('frontend.pages.consultation', ['title' => $title]);
     }
 
-//apointment
+    //apointment
     public function appointment()
     {
         //

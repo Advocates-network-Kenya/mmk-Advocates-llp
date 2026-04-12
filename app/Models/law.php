@@ -18,7 +18,7 @@ class law extends Model
         //content
         'content',
         'slug',
-        'icon',
+       // 'icon',
 
     ];
 }
