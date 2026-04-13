@@ -89,8 +89,12 @@ class LawController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(law $law)
+    public function destroy($id)
     {
         //
+        $law = law::find($id);
+        $law->delete();
+        return redirect()->route('law.index')->with('danger', ' deleted successfully.');
+
     }
 }

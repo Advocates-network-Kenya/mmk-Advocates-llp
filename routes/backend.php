@@ -12,7 +12,7 @@ Route::prefix('Areas-of-law')->group(function () {
     Route::post('store', [LawController::class, 'store'])->name('law.store');
     Route::get('{id}/edit', [LawController::class, 'edit'])->name('law.edit');
     Route::put('{id}/update', [LawController::class, 'update'])->name('law.update');
-    Route::delete('{id}/delete', [LawController::class, 'delete'])->name('law.destroy');
+    Route::delete('{id}/delete', [LawController::class, 'destroy'])->name('law.destroy');
 });
 //team routes
 Route::prefix('teams')->group(function () {

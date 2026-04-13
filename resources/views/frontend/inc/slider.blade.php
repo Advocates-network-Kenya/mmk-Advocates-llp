@@ -1,5 +1,19 @@
  <!-- Carousel Start -->
-        <div id="carousel" class="carousel slide" data-ride="carousel" style="overflow: hidden;">
+        <style>
+            html, 
+            body {
+                overflow-x: hidden;
+                width: 100%;
+            }
+
+            #carousel,
+            .carousel-inner, 
+            .carousel-item {
+                overflow: hidden;
+            }
+        </style>
+
+        <div id="carousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carousel" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel" data-slide-to="1"></li>

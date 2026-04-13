@@ -13,7 +13,7 @@
                         </div>
                         <div class="about-text">
                             <p>
-                               <span class="text-primary">MK Advocates LLP</span> is a forward-thinking and dynamic law firm based in Kenya,offering a comprehensive array of legal services to a diverse clientele.
+                              <b> <span class="text-primary">MMK Advocates LLP</span></b> is a forward-thinking and dynamic law firm based in Kenya,offering a comprehensive array of legal services to a diverse clientele.
                             </p>
                             <p>
                                Our clients include local and international corporations, government entities, multinational companies, non-governmental organizations (NGOs), and high-net-worth individuals. The firm is headquartered in Thika.
