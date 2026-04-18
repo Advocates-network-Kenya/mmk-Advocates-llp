@@ -26,7 +26,8 @@
                  </div>
              </div>
              @endforeach
-
+              {{-- add cta to more practice areas button --}}
+              
 
              
              {{-- end loop --}}

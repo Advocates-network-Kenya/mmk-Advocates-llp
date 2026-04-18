@@ -13,9 +13,7 @@
                  </div>
                  <div class="about-text">
                      <p>
-                         With a strong commitment to justice, our advocates combine in-depth legal knowledge with
-                         strategic thinking to protect your interests, resolve disputes efficiently, and guide you
-                         confidently through every stage of the legal process.
+                         MMK Advocates LLP, success is driven by a collaborative, dedicated team of legal professionals, support staff, and specialists who work together seamlessly to deliver exceptional client outcomes. From partners and associates to paralegals, legal secretaries, and IT and office managers, every member plays a vital role in ensuring efficiency, precision, and client satisfaction.
                      </p>
 
 

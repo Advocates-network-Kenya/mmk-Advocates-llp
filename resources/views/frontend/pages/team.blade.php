@@ -2,23 +2,58 @@
 
 @section('content')
     <style>
-        .btn-team-cta {
-            background: #880411 !important;
-            color: #ffffff !important;
-            border: none;
-            transition: 0.3s;
+        .team-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            border-radius: 10px;
         }
 
-        .btn-team-cta:hover {
-            background: #880410 !important;
-            color: #ffffff !important;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        .team-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
         }
 
         .team-item img {
             width: 100%;
             height: 350px;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .team-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .team-item .card-body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .team-item .card-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555 !important;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #880411;
+            color: #ffffff;
+            padding: 8px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-weight: 500;
+            margin-top: auto;
+            align-self: center;
+        }
+
+        .cta-button:hover {
+            background: #6b030d;
+            color: #ffffff;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 
@@ -35,14 +70,12 @@
                 {{-- team card start here --}}
                 @foreach ($partners as $partner)
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card team-item border-0 shadow-sm">
+                        <div class="card team-item border-0 shadow-sm h-100">
                             <img src="{{ storage_url($partner->image) }}" class="card-img-top" alt="Advocate Name">
                             <div class="card-body text-center">
                                 <h4 class="font-weight-bold">{{ $partner->name }}</h4>
                                 <h6 class="text-primary mb-3">{{ $partner->qualifications }}</h6>
-                                <p class="card-text text-muted small">
-                                    {{ Str::limit($partner->content, 130) }}
-                                    .</p>
+                                <p class="card-text">{{ Str::limit($partner->content, 130) }}</p>
                                 <a href="#" class="cta-button">Read More</a>
                             </div>
                         </div>
@@ -65,16 +98,14 @@
                 {{-- Associates card start here --}}
                 @foreach ($associates as $associate)
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card team-item border-0 shadow-sm">
+                        <div class="card team-item border-0 shadow-sm h-100">
                             <img src="{{ storage_url($associate->image) }}" class="card-img-top"
                                 alt="
                         {{ $associate->name }}">
                             <div class="card-body text-center">
                                 <h4 class="font-weight-bold">{{ $associate->name }}</h4>
                                 <h6 class="text-primary mb-3">{{ $associate->qualifications }}</h6>
-                                <p class="card-text text-muted small">
-                                    {{ Str::limit($associate->content, 130) }}.
-                                </p>
+                                <p class="card-text">{{ Str::limit($associate->content, 130) }}</p>
                                 <a href="#" class="cta-button">Read More</a>
                             </div>
                         </div>
@@ -98,15 +129,13 @@
                 {{-- lawyer card start here --}}
                 @foreach ($lawyers as $lawyer)
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card team-item border-0 shadow-sm">
+                        <div class="card team-item border-0 shadow-sm h-100">
                             <img src="{{ storage_url($lawyer->image) }}" class="card-img-top" alt="{{
                                 $lawyer->name }}">
                             <div class="card-body text-center">
                                 <h4 class="font-weight-bold">{{ $lawyer->name }}</h4>
                                 <h6 class="text-primary mb-3">{{$lawyer->qualifications }}</h6>
-                                <p class="card-text text-muted small">
-                                    {{ Str::limit($lawyer->content, 130) }}
-                                .</p>
+                                <p class="card-text">{{ Str::limit($lawyer->content, 130) }}</p>
                                 <a href="#" class="cta-button">Read More</a>
                             </div>
                         </div>
@@ -130,15 +159,13 @@
                 {{-- Paralegal card start here --}}
                 @foreach ($paralegals as $paralegal)
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card team-item border-0 shadow-sm">
+                        <div class="card team-item border-0 shadow-sm h-100">
                             <img src="{{ storage_url($paralegal->image) }}" class="card-img-top" alt="{{
                                 $paralegal->name }}">
                             <div class="card-body text-center">
                                 <h4 class="font-weight-bold">{{ $paralegal->name }}</h4>
                                 <h6 class="text-primary mb-3">{{$paralegal->qualifications }}</h6>
-                                <p class="card-text text-muted small">
-                                    {{ Str::limit($paralegal->content, 130) }}
-                                .</p>
+                                <p class="card-text">{{ Str::limit($paralegal->content, 130) }}</p>
                                 <a href="#" class="cta-button">Read More</a>
                             </div>
                         </div>
@@ -163,14 +190,12 @@
                 {{-- finance and ict card start here--}}
                 @foreach ($others as $other)
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card team-item border-0 shadow-sm">
+                    <div class="card team-item border-0 shadow-sm h-100">
                         <img src="{{ storage_url($other->image) }}" class="card-img-top" alt="{{ $other->name }}">
                         <div class="card-body text-center">
                             <h4 class="font-weight-bold">{{ $other->name }}</h4>
-                            <h6 class="text-primary mb-3">{{$other->qualifications }}</h6>
-                            <p class="card-text text-muted small">
-                                {{ Str::limit($other->content, 130) }}.
-                            </p>
+                            {{-- <h6 class="text-primary mb-3">{{$other->qualifications }}</h6> --}}
+                            <p class="card-text">{{ Str::limit($other->content, 130) }}</p>
                             <a href="#" class="cta-button">Read More</a>
                         </div>
                     </div>

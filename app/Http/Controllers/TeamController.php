@@ -85,8 +85,12 @@ class TeamController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Team $team)
+    public function destroy($id)
     {
         //
+        $team = Team::find($id);
+        $team->delete();
+        return redirect()->route('team.index')->with('success', ' deleted successfully.');
+
     }
 }

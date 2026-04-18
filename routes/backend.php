@@ -21,5 +21,5 @@ Route::prefix('teams')->group(function () {
     Route::post('store', [TeamController::class, 'store'])->name('team.store');
     Route::get('{id}/edit', [TeamController::class, 'edit'])->name('team.edit');
     Route::put('{id}/update', [TeamController::class, 'update'])->name('team.update');
-    Route::delete('{id}/delete', [TeamController::class, 'delete'])->name('team.destroy');
+    Route::delete('{id}/delete', [TeamController::class, 'destroy'])->name('team.destroy');
 }); 

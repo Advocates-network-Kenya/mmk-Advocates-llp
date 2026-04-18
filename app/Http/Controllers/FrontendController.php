@@ -18,7 +18,7 @@ class FrontendController extends Controller
     public function index()
     {
         //
-        $practiceareas = law::latest()->paginate(6);
+        $practiceareas = law::oldest()->paginate(6);
         $title = 'Welcome to mmkAdvocates LLp';
         return view('frontend.pages.index', ['title' => $title, 'practiceareas' => $practiceareas]);
     }
@@ -36,7 +36,7 @@ class FrontendController extends Controller
     public function practiceareas()
     {
         //
-        $practiceareas = law::latest()->paginate(6);
+        $practiceareas = law::oldest()->paginate(6);
         $title = 'Practice Areas';
         return view('frontend.pages.practice', [
             'title' => $title,
@@ -143,5 +143,3 @@ class FrontendController extends Controller
         //
     }
 }
-
-

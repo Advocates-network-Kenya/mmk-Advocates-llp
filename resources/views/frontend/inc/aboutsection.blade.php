@@ -9,7 +9,7 @@
                     </div>
                     <div class="col-lg-7 col-md-6">
                         <div class="section-header">
-                            <h2>Supporting You Every Step</h2>
+                            <h2>Supporting You In Every Step</h2>
                         </div>
                         <div class="about-text">
                             <p>
